@@ -78,7 +78,7 @@ table {
   max-width: 600px;
 }
 
-.wrap-mid {
+.wrap-med {
   margin: 0 auto;
   width: 100%;
   max-width: 900px;
@@ -97,13 +97,15 @@ table {
 }
 
 header {
-  background-color: rgba(255, 255, 255, .5);
+  background-color: transparent;
   display: block;
-  height: 120px;
+  height: 100px;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 3;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
 }
 
 #logo {
@@ -116,15 +118,14 @@ header {
 }
 
 nav {
-  margin-right: 30px;
-  text-align: right;
+  margin: 0 auto;
+  text-align: center;
 }
 
 nav li {
   display: inline-block;
   font-family: 'Lato', sans-serif;
-  font-size: 17px;
-  font-size: 1.1rem;
+  font-size: 18px;
   font-style: normal;
   font-weight: 400;
   padding: 0 20px;
@@ -134,7 +135,7 @@ nav li {
 }
 
 nav a {
-  color: rgba(0, 0, 0, .5);
+  color: rgba(0, 0, 0, .8);
   cursor: pointer;
   display: block;
   padding-top: 40px;
@@ -147,6 +148,12 @@ nav a:hover {
   -moz-transition: all 0.35s ease-in-out;
   -o-transition: all 0.35s ease-in-out;
   transition: all 0.35s ease-in-out;
+}
+
+nav .active a {
+  color: rgba(0, 0, 0, 1);
+  border-bottom: 2px solid #000;
+  padding-bottom: 8px;
 }
 
 .slide-center-out {
@@ -184,7 +191,7 @@ article {
 article>.inner {
   display: table-cell;
   vertical-align: middle;
-  padding: 60px 0;
+  padding: 100px 0;
 }
 
 .group:after {
@@ -193,61 +200,135 @@ article>.inner {
   clear: both;
 }
 
-#home,
-#registry {
-  margin-top: 10em;
+#home {
+  background: url(../img/jj-1.jpg);
+  background-size: cover;
+  height: 800px;
+  width: 100%;
 }
 
 #home h1 {
+  color: rgba(0, 0, 0, 1);
   font-family: 'Sacramento', cursive;
-  font-size: 24px;
+  font-size: 75px;
+  font-style: normal;
+  font-weight: 400;
+  text-align: center;
+  margin: 33% auto 0 auto;
+  width: auto;
 }
 
-#registry span {
-  color: rgba(0, 0, 0, .7);
-  display: inline-block;
-  margin: 0 0 50px 0;
-  padding: 10px;
+#details-bg {
+  background: url(../img/jj-3.jpg);
+  background-size: cover;
+  height: 800px;
+  width: 100%;
 }
 
-#registry h1 {
-  color: rgba(0, 0, 0, .7);
+#details h1 {
+  color: rgba(255, 182, 193, 1);
+  font-family: 'Sacramento', cursive;
+  font-size: 45px;
+  font-style: normal;
+  font-weight: 400;
+  text-align: center;
+  margin-top: 70px;
+  width: auto;
+}
+
+#details h2 {
+  color: rgba(0, 0, 0, .8);
   font-family: 'Lato', sans-serif;
-  font-size: 22px;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 300;
+  text-align: center;
+  width: auto;
+}
+
+#details img {
+  cursor: pointer;
+  padding-top: 15px;
+}
+
+#registry,
+#rsvp {
+  margin-top: 100px;
+}
+
+#registry img {
+  cursor: pointer;
+  margin-bottom: 40px;
+}
+
+#shower-intro {
+  background: url(../img/jodi.jpg);
+  background-size: cover;
+  opacity: .9;
+  height: 800px;
+  width: 100%;
+}
+
+#shower-intro h1 {
+  color: rgba(0, 0, 0, 1);
+  font-family: 'Sacramento', cursive;
+  font-size: 70px;
   font-style: normal;
   font-weight: 400;
   line-height: 34px;
   text-align: center;
-  margin-bottom: 70px;
-  width: auto;
+  padding-left: 50px;
+  width: 350px;
 }
 
-#fa-icons {
-  margin: 0 auto;
-}
-
-#fa-icons i {
-  color: rgba(0, 0, 0, .7);
-  padding-bottom: 15px;
-  display: inline-block;
-}
-
-#fa-icons p {
+#shower, .registry-text p {
+  color: rgba(0, 0, 0, .8);
   font-family: 'Lato', sans-serif;
-  font-size: 17px;
-  font-size: 1.1rem;
+  font-size: 26px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 300;
+  line-height: 40px;
   text-align: center;
-  text-transform: uppercase;
-  width: auto;
+  padding: 0 30px 40px 30px;
 }
 
-.grid-3 {
-  -webkit-column-count: 3; /* Chrome, Safari, Opera */
-  -moz-column-count: 3; /* Firefox */
-  column-count: 3;
-  -webkit-column-gap: 5px; /* Chrome, Safari, Opera */
-  -moz-column-gap: 5px; /* Firefox */
-  column-gap: 5px;
+#shower, .registry-text a {
+  color: #2E8AE6;
+  font-weight: 400;
+  padding-bottom: 3px;
+  text-decoration: none;
+}
+
+#shower, .registry-text a:hover {
+  color: #70B8FF;
+  border-bottom: 3px solid #70B8FF;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+
+#shower li {
+  color: rgba(0, 0, 0, .8);
+  font-family: 'Lato', sans-serif;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 40px;
+  text-align: center;
+  padding: 0 30px 40px 30px;
+  text-align: center;
+}
+
+#shower .fa {
+  color: #FF99CC;
+}
+
+.grid-2 {
+  -webkit-column-count: 2; /* Chrome, Safari, Opera */
+  -moz-column-count: 2; /* Firefox */
+  column-count: 2;
+  -webkit-column-gap: 40px; /* Chrome, Safari, Opera */
+  -moz-column-gap: 40px; /* Firefox */
+  column-gap: 40px;
 }
